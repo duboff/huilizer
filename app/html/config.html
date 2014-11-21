@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Configuration page for the khuilo substitution chrome extension.">
+    <title>Khuilo Substitutions Configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/substitutions.css">
+    <link rel="shortcut icon" type="image/png" href="../images/enabled.png">
+    <script src="../scripts/background.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../scripts/options.js" type="text/javascript"></script>
+</head>
+
+<body class="col-xs-6 col-xs-offset-3">
+    <div class="heading">
+        <div class="title">
+            <h1>Huilizer | Хуйалайзер</h1>
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li>
+                <div class="menu-btn">
+                    <button id="save" class="btn btn-success save-btn">
+                        <i class="fa fa-check"></i>
+                        <span>Saved</span>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="menu-btn">
+                    <button id="refresh" class="btn btn-info refresh-btn">
+                        <i class="fa fa-refresh"> </i> Reload current settings
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="menu-btn">
+                    <button id="reset" class="btn btn-danger reset-btn">
+                        <i class="fa fa-rotate-right"> </i> Reset to defaults
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="options">
+        <div class="parag">
+            <h3>Website Blacklist</h3>
+            <p>While this extension tries not to effect things like login forms or emails, due to the complex nature of websites this cannot be garanteed. So there is a way to stop this extension working on specific sites.</p>
+            <p>If a websites address/URL contains any of the following sites, this extension will ignore it.</p>
+            <p>Feel free to add your own to the list.</p>
+            <form id="blacklist">
+                <div>
+                    <input autocomplete="off" placeholder="A comma separated list of websites" id="website-blacklist" type="text" type="text" class="input form-control field">
+                </div>
+            </form>
+        </div>
+        <div class="parag">
+            <h3>Substitutions List</h3>
+            <p>The original word will be replaced with the substituted word.</p>
+            <form id="replacements">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
